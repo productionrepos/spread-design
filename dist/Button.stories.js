@@ -1,83 +1,52 @@
-import React from 'react';
-import styled from 'styled-components';
+"use strict";
 
-import { Button } from './Button';
-import { Icon } from './Icon';
-import { StoryLinkWrapper } from './StoryLinkWrapper';
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-const CustomButton = styled.button`
-  border: 1px solid green;
-  background: lightgreen;
-  color: rebeccapurple;
-  padding: 1em;
-  font-size: 1.2em;
-`;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AllButtons = exports.default = void 0;
+
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/taggedTemplateLiteral"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _Button = require("./Button");
+
+var _Icon = require("./Icon");
+
+var _StoryLinkWrapper = require("./StoryLinkWrapper");
+
+var _templateObject;
+
+var CustomButton = _styledComponents.default.button(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n  border: 1px solid green;\n  background: lightgreen;\n  color: rebeccapurple;\n  padding: 1em;\n  font-size: 1.2em;\n"])));
 
 function ButtonWrapper(props) {
-  return <CustomButton {...props}/>;
+  return /*#__PURE__*/_react.default.createElement(CustomButton, props);
 }
 
-export default {
+var _default = {
   title: 'Design System/Button',
-  component: Button,
+  component: _Button.Button
+};
+exports.default = _default;
+
+var AllButtons = function AllButtons(args) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Button.Button, {
+    appearance: "primary"
+  }, "Primary"), /*#__PURE__*/_react.default.createElement(_Button.Button, {
+    appearance: "secondary"
+  }, "Secondary"), /*#__PURE__*/_react.default.createElement(_Button.Button, {
+    appearance: "tertiary"
+  }, "Tertiary"), /*#__PURE__*/_react.default.createElement(_Button.Button, {
+    appearance: "outline"
+  }, "Outline"));
 };
 
-export const AllButtons = (args) => (
-  <div>
-    <Button appearance="primary">Primary</Button>
-    <Button appearance="secondary">Secondary</Button>
-    <Button appearance="tertiary">Tertiary</Button>
-    <Button appearance="outline">Outline</Button>
-    {/* <Button appearance="primaryOutline">Outline primary</Button>
-    <Button appearance="secondaryOutline">Outline secondary</Button>
-    <Button appearance="primary" isDisabled>
-      Disabled
-    </Button>
-    <br />
-    <Button appearance="primary" isLoading>
-      Primary
-    </Button>
-    <Button appearance="secondary" isLoading>
-      Secondary
-    </Button>
-    <Button appearance="tertiary" isLoading>
-      Tertiary
-    </Button>
-    <Button appearance="outline" isLoading>
-      Outline
-    </Button>
-    <Button appearance="outline" isLoading loadingText="Custom...">
-      Outline
-    </Button>
-    <br />
-    <Button appearance="primary" size="small">
-      Primary
-    </Button>
-    <Button appearance="secondary" size="small">
-      Secondary
-    </Button>
-    <Button appearance="tertiary" size="small">
-      Tertiary
-    </Button>
-    <Button appearance="outline" size="small">
-      Outline
-    </Button>
-    <Button appearance="primary" isDisabled size="small">
-      Disabled
-    </Button>
-    <Button appearance="outline" size="small" containsIcon>
-      <Icon icon="link" aria-label="Link" />
-    </Button>
-    <Button appearance="outline" size="small">
-      <Icon icon="link" />
-      Link
-    </Button> */}
-  </div>
-);
-
-AllButtons.storyName= 'all buttons';
-
-// export const buttonWrapper = (args) => (
+exports.AllButtons = AllButtons;
+AllButtons.storyName = 'all buttons'; // export const buttonWrapper = (args) => (
 //   <div>
 //     <ButtonWrapper>Original Button Wrapper</ButtonWrapper>
 //     <br />
@@ -143,9 +112,7 @@ AllButtons.storyName= 'all buttons';
 //     </Button>
 //   </div>
 // );
-
 // buttonWrapper.storyName='button wrapper';
-
 // export const AnchorWrapper = (args) => (
 //   <div>
 //     <StoryLinkWrapper to="http://storybook.js.org">Original Link Wrapper</StoryLinkWrapper>
@@ -288,5 +255,4 @@ AllButtons.storyName= 'all buttons';
 //     </Button>
 //   </div>
 // );
-
 // AnchorWrapper.storyName= 'anchor wrapper';
